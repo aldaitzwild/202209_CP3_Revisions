@@ -1,0 +1,16 @@
+table, td {
+    border-collapse: collapse;
+    border: 3px solid black;
+    margin: auto;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px;
+}
