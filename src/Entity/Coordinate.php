@@ -22,6 +22,9 @@ class Coordinate
     #[ORM\ManyToOne(targetEntity: Boat::class, inversedBy: 'coordinates', cascade:[ 'persist'])]
     private $boat;
 
+    #[ORM\Column(type: 'boolean', nullable: true)]
+    private $hasBeenBombed;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +62,18 @@ class Coordinate
     public function setBoat(?Boat $boat): self
     {
         $this->boat = $boat;
+
+        return $this;
+    }
+
+    public function isHasBeenBombed(): ?bool
+    {
+        return $this->hasBeenBombed;
+    }
+
+    public function setHasBeenBombed(?bool $hasBeenBombed): self
+    {
+        $this->hasBeenBombed = $hasBeenBombed;
 
         return $this;
     }
